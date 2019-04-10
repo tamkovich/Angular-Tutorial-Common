@@ -9,11 +9,16 @@ export class DateComponent implements OnInit {
   message: string;
   items = ["Django", "Flask", "Odoo", "AioHTTP", "Tornado"];
   loggedIn = true;
+  isCollapsed = true;
 
   constructor() { 
   	setInterval(()=>{
   		this.message = new Date().toLocaleTimeString();
   	}, 1000);
+  }
+
+  toggleCollapsed() {
+    this.isCollapsed = !this.isCollapsed;
   }
 
   ngOnInit() {
