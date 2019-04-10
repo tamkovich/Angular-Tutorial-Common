@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class DateComponent implements OnInit {
   message: string;
   items = ["Django", "Flask", "Odoo", "AioHTTP", "Tornado"];
+  loggedIn = true;
 
   constructor() { 
   	setInterval(()=>{
